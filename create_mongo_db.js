@@ -1,8 +1,9 @@
 var MongoClient = require('mongodb').MongoClient;
+//Create a database named "mydb":
+var url = "mongodb://localhost:27017/mydb";
 
-var url = "mongodb://98.109.150.177/32:27017/mydb";
-MongoClient.connect(url,function(err,db){
-  if(err)throw err;
-  console.log("database Created !!");
-  db.close();
+MongoClient.connect(url, function(err, db) {
+  if (err) throw err;
+  console.log("Database created!");
+  db.close();
 });
